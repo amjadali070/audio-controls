@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import AudioControls from './AudioControls';
 
 function App() {
+  const [volume, setvolume] = useState(0);
+  const [bass, setbass] = useState(0);
+  const [mid, setmid] = useState(0);
+  const [treble, settreble] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AudioControls name="Volume" set={setvolume} value={volume} />
+      <br />
+      <AudioControls name="Bass" set={setbass} value={bass} />
+      <br />
+      <AudioControls name="Mid" set={setmid} value={mid} />
+      <br />
+      <AudioControls name="Treble" set={settreble} value={treble} />
+    </>
   );
 }
 

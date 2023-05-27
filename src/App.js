@@ -5,6 +5,11 @@ import AudioControls from './AudioControls';
 import Counter from './Counter';
 import DataFecting from './DataFetch';
 import TodoList from './Todo';
+import Time from './Timer';
+import MyForm from './Form';
+import RandomUserComponent from './ExamTask';
+import CounterInput from './CounterInput';
+
 
 function App() {
   const [volume, setvolume] = useState(0);
@@ -37,7 +42,30 @@ function App() {
 
       <TodoList/>
 
+      <br />
+      <br />
+
+      <Time/>
+
+      <br />
+      
+
+      <MyForm/>
+      <br />
+      <br />
+      <RandomUserComponent n={10} />
+
+      <br />
+
+      <CounterInput initial={5} max={10} min={1}/>
+      <br />
+      <br />
+
+      <br />
+      <br />
+
     </div>    
+
   );
 }
 
